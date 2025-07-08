@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tropical Escape</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.core.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#highlights">Photos</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#form">Book</a>
+    </nav>
+
+    <!-- Hero banner -->
+    <header id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to your</h1>
+            <h1 class="hero-title">Tropical Escape</h1>
+            <p>Your dream vacation awaits you</p>
+            <a href="#form" class="cta-button">Book Now</a>
+        </div>
+    </header>
+
+    <!-- Photo highlights -->
+    <section id="highlights" class="section">
+        <h2>Photo Highlights</h2>
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track" data-aos="fade-up" data-aos-delay="200">
+                <ul class="glide__slides">
+                    <li class="glide__slide"><img src="assets/images/beach.jpeg" alt="Beach"></li>
+                    <li class="glide__slide"><img src="assets/images/tropical palm.jpg" alt="Tropical"></li>
+                    <li class="glide__slide"><img src="assets/images/island hotel.jpg" alt="Island"></li>
+                    <li class="glide__slide"><img src="assets/images/resort room.jpg" alt="Resort"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular destinations -->
+    <section id="destinations" class="section">
+        <h2>Popular Destinations</h2>
+        <div class="gallery">
+            <div class="destination" data-aos="fade-up" data-aos-delay="0">
+                <img src="assets/images/bali.jpg" alt="Bali" />
+                <h3>Bali</h3>
+            </div>
+            <div class="destination" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/images/maldives.jpg" alt="Maldives" />
+                <h3>Maldives</h3>
+            </div>
+            <div class="destination" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/images/hawaii.jpg" alt="Hawaii" />
+                <h3>Hawaii</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chart -->
+    <section id="stats" class="section">
+        <h2>Monthly Bookings</h2>
+        <canvas id="bookingChart" data-aos="fade-up" data-aos-delay="200" width="400" height="200"></canvas>
+    </section>
+
+    <!-- Form -->
+    <section id="form" class="section">
+        <h2>Book Your Trip</h2>
+        <div class="form-container" data-aos="fade-up" data-aos-delay="200">
+            <form>
+                <div class="form-row">
+                    <input type="text" placeholder="Full Name" required />
+                    <input type="email" placeholder="Email Address" required />
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone Number" required />
+                    <input type="text" placeholder="Travel Destination" required />
+                </div>
+                <div class="form-row">
+                    <label>Leaving Date</label>
+                    <input type="date" required />
+                    <label>Returning Date</label>
+                    <input type="date" required />
+                </div>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tropical Escape. All rights reserved.</p>
+    </footer>
+
+    <!-- JS libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
